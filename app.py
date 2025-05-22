@@ -7,8 +7,10 @@ import joblib
 # ---------- 1. Cargar pipeline ------------------------------------------------
 @st.cache_resource
 def load_model():
-    return joblib.load(r"C:\Users\pablo\OneDrive\Documentos\Universidad\Ingeniería en Inteligencia de Datos y Ciberseguridad\Semestre 2\Taller de Investigacion\final_approach\final\addiction_model\best_logreg_tuned.pkl")          # <-- asegúrate de que el .pkl esté aquí
+    return joblib.load("best_logreg_tuned.pkl")
 model = load_model()
+
+
 
 # ---------- 2. Diccionarios de mapeo -----------------------------------------
 likert_score = {'Nunca':0,'Rara vez':1,'A veces':2,'Con frecuencia':3,'Siempre':4}
